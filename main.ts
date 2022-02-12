@@ -20,9 +20,14 @@ function inici () {
     strip.show()
     cotxe1 = 1
     cotxe2 = 1
-    strip.setPixelColor(cotxe1, neopixel.colors(NeoPixelColors.Purple))
-    strip.setPixelColor(cotxe2, neopixel.colors(NeoPixelColors.Orange))
-    strip.show()
+    for (let index = 0; index < 4; index++) {
+        strip.showRainbow(1, 360)
+        basic.pause(200)
+        strip.clear()
+        strip.show()
+        basic.pause(100)
+    }
+    dibuix_cotxes()
     basic.showLeds(`
         . . . . .
         . . . . .
